@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <script src="../JavaScript/java.js" defer></script>
+    <meta charset="UTF-8">
+    <title>لوحة تحكم المدير</title>
+     <link rel="stylesheet" href="../CSS/style.css">
+</head>
+
+ <nav>
+        <ul>
+            <li><a href="../HTML/index.html">الرئيسية</a> </li>
+             <li><a href="../HTML/motor.html">دراجات</a></li>
+            <li><a href="../HTML/user.html">السيارات</a></li>
+            <li><a href="../HTML/contact_with_us.html">تواصل معنا</a></li>
+        </ul>
+    </nav>
+<header>
+    <h1>لوحة تحكم مدير الموقع</h1>
+</header>
+
+
+
+
+
+<nav>
+    <button onclick="showSection('add')">➕ إضافة سيارة</button>
+    <button onclick="showSection('edit')">✏ تعديل سيارة</button>
+    <button onclick="showSection('delete')">🗑 حذف سيارة</button>
+</nav>
+
+<main>
+
+    <!-- إضافة سيارة -->
+  <section id="add" class="admin-section">
+    <h2>إضافة سيارة جديدة</h2>
+
+    <input type="text" id="carName" placeholder="اسم السيارة"><br><br>
+    <textarea id="carDesc" placeholder="وصف السيارة"></textarea><br><br>
+    <input type="number" id="carPrice" placeholder="السعر"><br><br>
+
+    <!-- اختيار صورة من الجهاز -->
+    <input type="file" id="carImage" accept="image/*"><br><br>
+
+    <!-- معاينة الصورة -->
+    <img id="preview" width="200" style="display:none;"><br><br>
+
+    <button onclick="addCar()">حفظ السيارة</button>
+</section>
+
+    <!-- تعديل سيارة -->
+    <section id="edit" class="admin-section">
+        <h2>تعديل سيارة</h2>
+
+        <table border="1">
+            <tr>
+                <th>اسم السيارة</th>
+                <th>السعر</th>
+                <th>تعديل</th>
+            </tr>
+            <tr>
+                <td>BMW X5</td>
+                <td>80000$</td>
+                <td><button onclick="fakeAction('تم تعديل السيارة')">تعديل</button></td>
+            </tr>
+            <tr>
+                <td>BMW M3</td>
+                <td>70000$</td>
+                <td><button onclick="fakeAction('تم تعديل السيارة')">تعديل</button></td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- حذف سيارة -->
+    <section id="delete" class="admin-section">
+        <h2>حذف سيارة</h2>
+
+        <table border="1">
+            <tr>
+                <th>اسم السيارة</th>
+                <th>حذف</th>
+            </tr>
+            <tr>
+                <td>BMW X5</td>
+                <td><button onclick="fakeAction('تم حذف السيارة')">حذف</button></td>
+            </tr>
+        </table>
+    </section>
+
+</main>
+
+<footer>
+    <p>Admin Panel - BMW</p>
+</footer>
+
+<script src="../js/script.js"></script>
+</body>
+</html>
